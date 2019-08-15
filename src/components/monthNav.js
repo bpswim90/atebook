@@ -1,17 +1,19 @@
 import React from "react";
 
-function MonthNav() {
+function MonthNav({ month }) {
   return (
-    <nav class="level is-mobile">
-      <div class="level-item has-text-centered">
-        <span class="icon">
-          <i class="fas fa-chevron-left" />
+    <nav className="level is-mobile" style={{ padding: "1rem" }}>
+      <div className="level-item has-text-centered">
+        <span className="icon">
+          <i className="fas fa-chevron-left" />
         </span>
       </div>
-      <div class="level-item has-text-centered">August</div>
-      <div class="level-item has-text-centered">
-        <span class="icon">
-          <i class="fas fa-chevron-right" />
+      <div className="level-item has-text-centered">
+        <p className="title">{month}</p>
+      </div>
+      <div className="level-item has-text-centered">
+        <span className="icon">
+          <i className="fas fa-chevron-right" />
         </span>
       </div>
     </nav>

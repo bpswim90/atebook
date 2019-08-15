@@ -1,7 +1,7 @@
 import React from "react";
 
-function MonthLog() {
-  return <div>This is the month log</div>;
+function MonthLog({ days }) {
+  return <div>There are {days} days this month</div>;
 }
 
 export default MonthLog;
