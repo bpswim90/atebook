@@ -2,7 +2,7 @@ import React from "react";
 
 function MonthNav({ month }) {
   return (
-    <nav className="level is-mobile" style={{ padding: "1rem" }}>
+    <nav className="level is-mobile" style={{ paddingTop: "1rem" }}>
       <div className="level-item has-text-centered">
         <span className="icon">
           <i className="fas fa-chevron-left" />
