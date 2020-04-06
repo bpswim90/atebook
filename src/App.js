@@ -21,7 +21,7 @@ function App() {
   ];
 
   const today = new Date();
-  const currentMonth = today.getMonth();
+  let currentMonth = today.getMonth();
   const currentYear = today.getYear();
 
   function daysInCurrentMonth() {
@@ -30,7 +30,27 @@ function App() {
 
   return (
     <>
-      <MonthNav month={months[currentMonth]} />
+      <nav className="level is-mobile" style={{ paddingTop: "1rem" }}>
+        <div className="level-item has-text-centered">
+          <span
+            className="icon"
+            onClick={() => (currentMonth = currentMonth - 1)}
+          >
+            <i className="fas fa-chevron-left" />
+          </span>
+        </div>
+        <div className="level-item has-text-centered">
+          <p className="title">{months[currentMonth]}</p>
+        </div>
+        <div className="level-item has-text-centered">
+          <span
+            className="icon"
+            onClick={() => (currentMonth = currentMonth + 1)}
+          >
+            <i className="fas fa-chevron-right" />
+          </span>
+        </div>
+      </nav>
       <MonthLog days={daysInCurrentMonth()} />
     </>
   );
